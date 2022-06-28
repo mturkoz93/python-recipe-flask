@@ -8,7 +8,7 @@ def homepage():
     try:
         return 'Welcome adessi - ' + CONFIG.is_prod + CONFIG.flask_env
     except:
-        return 'There is an erro1'
+        return 'There is an error!'
 
 if (__name__ == '__main__'):
     app.run(debug=True)
