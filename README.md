@@ -5,6 +5,16 @@
 - pip install python-dotenv
 - pip install pymongo[srv]
 
+# Add .flaskenv
+```
+export FLASK_APP=app
+export FLASK_ENV=development
+export TEST=test
+export IS_HEROKU=test
+
+export DB_USERNAME=
+export DB_PASSWORD=
+```
 
 # Heroku - Create a new Git repository
 - cd my-project/
