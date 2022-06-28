@@ -2,6 +2,7 @@
 # Requirements
 - pip install flask
 - pip install pymongo
+- pip install python-dotenv
 
 
 # Heroku - Create a new Git repository
