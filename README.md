@@ -1,4 +1,8 @@
 
+# Requirements
+- pip install flask
+- pip install pymongo
+
 
 # Heroku - Create a new Git repository
 - cd my-project/
