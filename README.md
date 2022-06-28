@@ -3,6 +3,7 @@
 - pip install flask
 - pip install pymongo
 - pip install python-dotenv
+- pip install pymongo[srv]
 
 
 # Heroku - Create a new Git repository
