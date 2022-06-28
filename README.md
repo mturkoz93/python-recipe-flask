@@ -5,7 +5,7 @@
 - pip install python-dotenv
 - pip install pymongo[srv]
 
-# Add .flaskenv
+# Add .env file
 ```
 export FLASK_APP=app
 export FLASK_ENV=development
