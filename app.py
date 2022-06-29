@@ -1,10 +1,13 @@
+import os
 from flask import Flask, Response, request
 import pymongo
 import json
 from bson.objectid import ObjectId
 
-from dotenv import load_dotenv
-load_dotenv()
+
+if not os.environ.get("PRODUCTION"):
+    from dotenv import load_dotenv
+    load_dotenv()
 
 from data.config import CONFIG
 
