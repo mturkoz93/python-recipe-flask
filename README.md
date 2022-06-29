@@ -7,6 +7,8 @@ It uses <b>mongodb</b> on mongoatlas as a database service.
 
 
 ### Methods
+> Heroku is free to use, so it may take up to 30 seconds to start.
+
 <b>base_url:</b> https://adesso-recipe-flask.herokuapp.com/
 
 <b>list all recipes (GET):</b> https://adesso-recipe-flask.herokuapp.com/recipes
