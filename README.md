@@ -1,3 +1,18 @@
+# About App
+I developed a backend service about adding recipes and listing.
+
+The git repo is connected to <b>Heroku</b> and when the master branch is triggered, automatic deploy starts.
+
+
+### Methods
+<b>base_url:</b> https://adesso-recipe-flask.herokuapp.com/
+
+<b>list all recipes (GET):</b> https://adesso-recipe-flask.herokuapp.com/recipes
+
+<b>get a single recipe (GET):</b> https://adesso-recipe-flask.herokuapp.com/recipes/:recipe_id
+
+<b>create a new recipe (POST):</b> https://adesso-recipe-flask.herokuapp.com/recipes
+
 
 # Requirements
 - pip install flask
