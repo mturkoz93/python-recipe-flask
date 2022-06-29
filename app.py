@@ -61,26 +61,33 @@ create a new recipe.
 """
 @app.route('/recipes', methods = ['POST'])
 def createRecipe():
-    payload = request.get_json()
+    try:
+        payload = request.get_json()
 
-    new_recipe = {
-        "title": payload['title'],
-        "content": payload['content'],
-        "steps": payload['steps'],
-    }
+        new_recipe = {
+            "title": payload['title'],
+            "steps": payload['steps'],
+        }
 
-    dbResponse = db.recipes.insert_one(new_recipe)
+        dbResponse = db.recipes.insert_one(new_recipe)
 
-    return Response(
-        response= json.dumps(
-            {'message': 'recipe created', 
-            'recipe_id': f'{dbResponse.inserted_id}'
-            }
-        ),
-        status=200,
-        mimetype='application/json'
-    )
-
+        return Response(
+            response= json.dumps(
+                {'message': 'recipe created', 
+                'recipe_id': f'{dbResponse.inserted_id}'
+                }
+            ),
+            status=200,
+            mimetype='application/json'
+        )
+    except Exception as ex:
+        print(ex)
+        return Response(
+            response = json.dumps({'message': 'cannot create recipe!'}),
+            status=500,
+            mimetype='application/json'
+        )
+        
 # *************************************
 
 if (__name__ == '__main__'):
