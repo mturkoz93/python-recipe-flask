@@ -3,7 +3,7 @@ I developed a backend service about adding recipes and listing.
 
 The git repo is connected to <b>Heroku</b> and when the master branch is triggered, automatic deploy starts.
 
-It uses mongodb on mongoatlas as a database service.
+It uses <b>mongodb</b> on mongoatlas as a database service.
 
 
 ### Methods
