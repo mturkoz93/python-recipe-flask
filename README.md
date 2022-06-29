@@ -1,3 +1,14 @@
+# About App
+
+<b>base_url:</b> https://adesso-recipe-flask.herokuapp.com/
+
+### Methods
+<b>list all recipes (GET):</b> https://adesso-recipe-flask.herokuapp.com/recipes
+
+<b>get a single recipe (GET):</b> https://adesso-recipe-flask.herokuapp.com/recipes/:recipe_id
+
+<b>create a new recipe (POST):</b> https://adesso-recipe-flask.herokuapp.com/recipes
+
 
 # Requirements
 - pip install flask
