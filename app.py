@@ -17,8 +17,8 @@ list all recipes.
 def listAllRecipes():
     try:
         recipes = list(db.recipes.find())
-        for recipe in recipes:
-            recipe['_id'] = str(recipe['_id'])
+        # for recipe in recipes:
+        #    recipe['_id'] = str(recipe['_id'])
 
         return Response(
             response= json.dumps(recipes),
