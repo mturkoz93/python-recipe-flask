@@ -17,6 +17,15 @@ It uses <b>mongodb</b> on mongoatlas as a database service.
 
 <b>create a new recipe (POST):</b> https://adesso-recipe-flask.herokuapp.com/recipes
 
+<b>Example with Python `requests` library</b>:
+```
+new_recipe = {
+                "title": "Sigara Böreği",
+                "steps": ["1 kilo yufka", "Yarım kilo lor", "Sıvı yağ", "Tuz", "Karabiber"]
+            }
+requests.post("https://adesso-recipe-flask.herokuapp.com/recipes", json = recipe)
+```
+
 
 # Requirements
 - pip install flask
