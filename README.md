@@ -11,11 +11,11 @@ It uses <b>mongodb</b> on mongoatlas as a database service.
 
 <b>base_url:</b> https://adesso-recipe-flask.herokuapp.com/
 
-<b>list all recipes (GET):</b> https://adesso-recipe-flask.herokuapp.com/recipes
+<b>LIST all recipes (GET):</b> https://adesso-recipe-flask.herokuapp.com/recipes
 
-<b>get a single recipe (GET):</b> https://adesso-recipe-flask.herokuapp.com/recipes/:recipe_id
+<b>GET a single recipe (GET):</b> https://adesso-recipe-flask.herokuapp.com/recipes/:recipe_id
 
-<b>create a new recipe (POST):</b> https://adesso-recipe-flask.herokuapp.com/recipes
+<b>CREATE a new recipe (POST):</b> https://adesso-recipe-flask.herokuapp.com/recipes
 
 <b>Example with Python `requests` library</b>:
 ```
@@ -23,10 +23,11 @@ new_recipe = {
                 "title": "Sigara Böreği",
                 "steps": ["1 kilo yufka", "Yarım kilo lor", "Sıvı yağ", "Tuz", "Karabiber"]
             }
+
 requests.post("https://adesso-recipe-flask.herokuapp.com/recipes", json = new_recipe)
 ```
 
-<b>update the recipe (PATCH):</b> https://adesso-recipe-flask.herokuapp.com/recipes/:recipe_id
+<b>UPDATE the recipe (PATCH):</b> https://adesso-recipe-flask.herokuapp.com/recipes/:recipe_id
 
 <b>Example with Python `requests` library</b>:
 ```
@@ -34,9 +35,17 @@ new_recipe_values = {
                 "title": "Sigara Böreği",
                 "steps": ["1 kilo yufka", "Yarım kilo lor", "Sıvı yağ", "Tuz", "Karabiber"]
             }
-requests.patch("https://adesso-recipe-flask.herokuapp.com/recipes", json = new_recipe_values)
+
+requests.patch("https://adesso-recipe-flask.herokuapp.com/recipes/<recipe_id>", json = new_recipe_values)
 ```
 
+<b>DELETE the recipe (DELETE):</b> https://adesso-recipe-flask.herokuapp.com/recipes/:recipe_id
+
+<b>Example with Python `requests` library</b>:
+```
+
+requests.delete("https://adesso-recipe-flask.herokuapp.com/recipes")
+```
 
 # Requirements
 - pip install flask

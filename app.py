@@ -119,6 +119,34 @@ def updateRecipe(recipe_id):
             mimetype='application/json'
         )
         
+"""
+delete the recipe.
+"""
+@app.route('/recipes/<string:recipe_id>', methods = ['DELETE'])
+def deleteRecipe(recipe_id):
+    try:
+
+        myquery = { "_id": ObjectId(recipe_id) }
+
+        db.recipes.delete_one(myquery)
+
+        return Response(
+            response= json.dumps(
+                {
+                    'message': 'recipe deleted', 
+                    'success': True
+                }
+            ),
+            status=200,
+            mimetype='application/json'
+        )
+    except Exception as ex:
+        print(ex)
+        return Response(
+            response = json.dumps({'message': 'cannot delete recipe!'}),
+            status=500,
+            mimetype='application/json'
+        )
 # *************************************
 
 if (__name__ == '__main__'):
