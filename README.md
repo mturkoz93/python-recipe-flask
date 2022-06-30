@@ -44,7 +44,7 @@ requests.patch("https://adesso-recipe-flask.herokuapp.com/recipes/<recipe_id>", 
 <b>Example with Python `requests` library</b>:
 ```
 
-requests.delete("https://adesso-recipe-flask.herokuapp.com/recipes")
+requests.delete("https://adesso-recipe-flask.herokuapp.com/recipes/:recipe_id")
 ```
 
 # Requirements
