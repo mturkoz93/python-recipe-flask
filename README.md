@@ -23,7 +23,18 @@ new_recipe = {
                 "title": "Sigara Böreği",
                 "steps": ["1 kilo yufka", "Yarım kilo lor", "Sıvı yağ", "Tuz", "Karabiber"]
             }
-requests.post("https://adesso-recipe-flask.herokuapp.com/recipes", json = recipe)
+requests.post("https://adesso-recipe-flask.herokuapp.com/recipes", json = new_recipe)
+```
+
+<b>update the recipe (PATCH):</b> https://adesso-recipe-flask.herokuapp.com/recipes/:recipe_id
+
+<b>Example with Python `requests` library</b>:
+```
+new_recipe_values = {
+                "title": "Sigara Böreği",
+                "steps": ["1 kilo yufka", "Yarım kilo lor", "Sıvı yağ", "Tuz", "Karabiber"]
+            }
+requests.patch("https://adesso-recipe-flask.herokuapp.com/recipes", json = new_recipe_values)
 ```
 
 
@@ -40,8 +51,8 @@ export FLASK_ENV=development
 export TEST=test
 export IS_HEROKU=test
 
-export DB_USERNAME=
-export DB_PASSWORD=
+export DB_USERNAME=<mongoatlas-username>
+export DB_PASSWORD=<mongoatlas-user-password>
 ```
 
 # Heroku - Create a new Git repository

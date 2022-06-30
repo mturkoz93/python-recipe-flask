@@ -87,6 +87,37 @@ def createRecipe():
             status=500,
             mimetype='application/json'
         )
+
+"""
+update the recipe.
+"""
+@app.route('/recipes/<string:recipe_id>', methods = ['PATCH'])
+def updateRecipe(recipe_id):
+    try:
+        payload = request.get_json()
+
+        myquery = { "_id": ObjectId(recipe_id) }
+        newvalues = { "$set": { "title": payload['title'], "steps": payload['steps'] } }
+
+        db.recipes.update_one(myquery, newvalues)
+
+        return Response(
+            response= json.dumps(
+                {
+                    'message': 'recipe updated', 
+                    'success': True
+                }
+            ),
+            status=200,
+            mimetype='application/json'
+        )
+    except Exception as ex:
+        print(ex)
+        return Response(
+            response = json.dumps({'message': 'cannot update recipe!'}),
+            status=500,
+            mimetype='application/json'
+        )
         
 # *************************************
 
